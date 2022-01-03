@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+
+    <h1>Registro</h1>
+
+    <form action="/" method="POST">
+
+        <label for="nombre">Ingrese su nombre</label>
+        <input type="text" name="nombre" id="nombre" value="">
+        <span style="color: red;"><%= (locals.errors  && errors.nombre) ? errors.nombre.msg : "" %></span>
+        <p>
+
+        </p>
+        <p>
+            
+        </p>
+        <label for="mail">Ingrese su email</label>
+        <input type="text" name="mail" id="mail" value="">
+        <span style="color: red;"><%= (locals.errors  && errors.mail) ? errors.mail.msg : "" %></span>
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+        <label for="edad">Ingrese su edad</label>
+        <input type="tel" name="edad" id="edad" value="">
+        <span style="color: red;"><%= (locals.errors  && errors.edad) ? errors.edad.msg : "" %></span>
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+        <label for="fondo">Elija un color de fondo</label>
+        <select name="fondo" id="fondo">
+            <option value="" selected disabled > -- Elija un color -- </option>
+            <option value="Amarillo">Amarillo</option>
+            <option value="Verde">Verde</option>
+            <option value="Azul">Azul</option>
+        </select>
+        <span style="color: red;"><%= (locals.errors  && errors.fondo) ? errors.fondo.msg : "" %></span>
+    
+        <div>
+            <input type="checkbox" name="check_color" id="check_color">Recordar color
+        </div>
+
+        <button type="submit">ENVIAR</button>
+    
+    </form>
+
+</body>
+</html>
